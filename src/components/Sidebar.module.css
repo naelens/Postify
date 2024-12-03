@@ -35,7 +35,8 @@
     height: 3rem;
     box-sizing: initial;
     border-radius: 8px;
-    border: 2px solid var(--pink-200);
+    border: 2px solid var(--gray-800);
+    outline: 2px solid var(--pink-200);
 }
 
 .aboutMe {
