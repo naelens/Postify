@@ -9,10 +9,17 @@
     --gray-800: #202024;
     --gray-900: #121214;
 
+    --pink: #FFA8AF;
     --pink-100: #FFD3D8;
-    --pink-200: #FFB6C1;
+    --pink-200: #FF9AA2;
 
 
+}
+
+:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--pink-200);
+    border-radius: 2px;
 }
 
 * {
