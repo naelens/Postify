@@ -9,7 +9,6 @@ export function Post({ author, publishedAt, content}) {
 
     const [comments, setComments] = useState([
         "Achei incrível!!!",
-        "Foda demais"
     ])
 
     const [newCommentText, setNewCommentText] = useState('')
