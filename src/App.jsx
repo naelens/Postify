@@ -1,6 +1,5 @@
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
-import { Comment } from './components/Comment';
 import { Post } from './components/Post';
 import styles from './App.module.css'
 import './global.css';
@@ -37,7 +36,6 @@ const posts = [
 ]
 
 export function App() {
-
   return (
     <div>
       <Header />
@@ -48,7 +46,8 @@ export function App() {
         <main>
           {posts.map(post => {
             return (
-              <Post
+              <Post 
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
