@@ -23,7 +23,13 @@ export function Post({ author, publishedAt, content}) {
         setComments([...comments, newCommentText]);
 
         setNewCommentText('');
+    }
 
+    function deleteComment(commentToDelete) {
+        const commentsWithoutDeleteOne = comments.filter(comment => {
+            return comment != commentToDelete;
+        })
+        setComments(commentsWithoutDeleteOne);
     }
 
     const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm", {
@@ -79,10 +85,13 @@ export function Post({ author, publishedAt, content}) {
 
             <div className={styles.commentList}>
                 {comments.map(comment => {
-                    return <Comment
+                    return (
+                    <Comment
                         key={comment} 
                         content={comment}
+                        onDeleteComment={deleteComment}
                     />
+                    )
                 })}
             </div>
         </article>
