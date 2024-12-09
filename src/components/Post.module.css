@@ -110,8 +110,13 @@
     cursor: pointer;
 }
 
-.commentForm button[type=submit]:hover {
+.commentForm button[type=submit]:not(:disabled)hover {
     background: var(--pink);
+}
+
+.commentForm button:disabled {
+    opacity:0.7;
+    cursor: not-allowed;
 }
 
 .commentList {
